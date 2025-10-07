@@ -18,11 +18,15 @@ class ColorFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_color, container, false).apply {
-            setBackgroundColor(
-                Color.parseColor(
-                    arrayOf("Blue", "Maroon", "Magenta", "Green", "Red").random()
+            setOnClickListener {
+                setBackgroundColor(
+                    Color.parseColor(
+                        arrayOf("Blue", "Maroon", "Magenta", "Green", "Red").random()
+                    )
                 )
-            )
+
+            }
+
         }
     }
 
